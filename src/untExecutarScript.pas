@@ -41,6 +41,7 @@ type
     MemoDicas: TMemo;
     procedure pnlExecutarScriptClick(Sender: TObject);
     procedure pnlSelecionarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CarregarArquivosSQL(const Pasta: string);
@@ -113,6 +114,11 @@ begin
 
   FDScript.ValidateAll;
   FDScript.ExecuteAll;
+end;
+
+procedure TfrmExecutarScript.FormCreate(Sender: TObject);
+begin
+  pgcPrincipal.ActivePageIndex := 0;
 end;
 
 procedure TfrmExecutarScript.Log(const Msg: string);

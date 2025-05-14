@@ -12,6 +12,7 @@ object frmExecutarScript: TfrmExecutarScript
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poOwnerFormCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object Splitter: TSplitter
     Left = 222
@@ -29,7 +30,6 @@ object frmExecutarScript: TfrmExecutarScript
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitHeight = 441
     object CheckListBox: TCheckListBox
       AlignWithMargins = True
       Left = 10
@@ -42,9 +42,6 @@ object frmExecutarScript: TfrmExecutarScript
       Margins.Bottom = 15
       Align = alClient
       TabOrder = 0
-      ExplicitTop = 15
-      ExplicitWidth = 212
-      ExplicitHeight = 411
     end
     object pnlSelecionar: TPanel
       AlignWithMargins = True
@@ -71,7 +68,6 @@ object frmExecutarScript: TfrmExecutarScript
       TabOrder = 1
       StyleElements = []
       OnClick = pnlSelecionarClick
-      ExplicitTop = 411
     end
   end
   object pnlClient: TPanel
@@ -82,8 +78,6 @@ object frmExecutarScript: TfrmExecutarScript
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 544
-    ExplicitHeight = 441
     object pnlExecutarScript: TPanel
       AlignWithMargins = True
       Left = 10
@@ -109,8 +103,6 @@ object frmExecutarScript: TfrmExecutarScript
       TabOrder = 0
       StyleElements = []
       OnClick = pnlExecutarScriptClick
-      ExplicitTop = 391
-      ExplicitWidth = 524
     end
     object pgcPrincipal: TPageControl
       AlignWithMargins = True
@@ -122,7 +114,7 @@ object frmExecutarScript: TfrmExecutarScript
       Margins.Top = 15
       Margins.Right = 10
       Margins.Bottom = 0
-      ActivePage = tsDica
+      ActivePage = tsScript
       Align = alClient
       TabHeight = 30
       TabOrder = 1
@@ -142,8 +134,6 @@ object frmExecutarScript: TfrmExecutarScript
           Align = alClient
           ScrollBars = ssBoth
           TabOrder = 0
-          ExplicitWidth = 496
-          ExplicitHeight = 301
         end
       end
       object tsLog: TTabSheet
@@ -161,8 +151,6 @@ object frmExecutarScript: TfrmExecutarScript
           Align = alClient
           ScrollBars = ssBoth
           TabOrder = 0
-          ExplicitWidth = 496
-          ExplicitHeight = 301
         end
       end
       object tsDica: TTabSheet
@@ -180,20 +168,17 @@ object frmExecutarScript: TfrmExecutarScript
           Margins.Bottom = 10
           Align = alClient
           Lines.Strings = (
-            '2. Confirme que o arquivo .sql est'#225' salvo como UTF-8'
+            'Confirme que o arquivo .sql est'#225' salvo como UTF-8'
+            ''
             #10'Abra o arquivo no Notepad++ ou VS Code'#10#10
+            ''
             'Verifique a codifica'#231#227'o:'
+            ''
             #10#10'Se estiver como ANSI ou outra, altere para UTF-8'#10#10
-            'Salve novamente'#10#10
-            'No Notepad++:'#10
-            
-              'Menu "Codifica'#231#227'o" '#8594' "Codificar em UTF-8" (ou UTF-8 sem BOM, se ' +
-              'necess'#225'rio)'
-            #10#10'Salve')
+            ''
+            'Salve novamente'#10#10)
           ScrollBars = ssBoth
           TabOrder = 0
-          ExplicitLeft = 18
-          ExplicitTop = 18
         end
       end
     end
