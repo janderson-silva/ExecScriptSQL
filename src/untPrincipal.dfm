@@ -1,0 +1,131 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'ExecScripSQL'
+  ClientHeight = 461
+  ClientWidth = 784
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object pnlLateral: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 250
+    Height = 455
+    Align = alLeft
+    BevelKind = bkFlat
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitHeight = 435
+    object pnlConfigurarConexao: TPanel
+      AlignWithMargins = True
+      Left = 10
+      Top = 15
+      Width = 226
+      Height = 35
+      Cursor = crHandPoint
+      Margins.Left = 10
+      Margins.Top = 15
+      Margins.Right = 10
+      Margins.Bottom = 0
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Conectar Banco de Dados (F2)'
+      Color = 5540912
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      StyleElements = []
+      OnClick = pnlConfigurarConexaoClick
+    end
+    object pnlTestarConexao: TPanel
+      AlignWithMargins = True
+      Left = 10
+      Top = 65
+      Width = 226
+      Height = 35
+      Cursor = crHandPoint
+      Margins.Left = 10
+      Margins.Top = 15
+      Margins.Right = 10
+      Margins.Bottom = 0
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Testar Conex'#227'o (F3)'
+      Color = 5540912
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 1
+      StyleElements = []
+      OnClick = pnlTestarConexaoClick
+    end
+    object pnlExecutarScript: TPanel
+      AlignWithMargins = True
+      Left = 10
+      Top = 115
+      Width = 226
+      Height = 35
+      Cursor = crHandPoint
+      Margins.Left = 10
+      Margins.Top = 15
+      Margins.Right = 10
+      Margins.Bottom = 0
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Executar Script (F4)'
+      Color = 5540912
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 2
+      StyleElements = []
+      OnClick = pnlExecutarScriptClick
+    end
+    object pnlExecutarQuery: TPanel
+      AlignWithMargins = True
+      Left = 10
+      Top = 165
+      Width = 226
+      Height = 35
+      Cursor = crHandPoint
+      Margins.Left = 10
+      Margins.Top = 15
+      Margins.Right = 10
+      Margins.Bottom = 0
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Executar Query (F5)'
+      Color = 5540912
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 3
+      StyleElements = []
+    end
+  end
+end
